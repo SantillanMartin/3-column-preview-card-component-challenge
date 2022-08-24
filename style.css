@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.main{
+    width: 55rem;
+    height: 30rem;
+    display: flex;
+    box-shadow: 1px 1px 10px rgb(180, 165, 165);
+    border-radius: 00.4rem;
+
+}
+.main img{
+    width: 3.5rem;
+}
+
+.main__sedans{
+    background-color: var(--bright-orange);
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    
+}
+
+.main__suvs{
+    background-color: var(--Dark-cyan);
+    
+}
+
+.main__luxury{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    
+}
+
+.main__sedans,.main__suvs,.main__luxury{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #ffffff;
+}
+picture{
+    width: 80%;
+    
+}
+
+
+.main__title{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    width: 80%;
+    
+    
+}
+
+.main__text{
+    text-align:left;
+    font-weight: 400;
+    width: 80%;
+    height: 11rem;
+    line-height: 1.7rem;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    
+}
+.main__container__button{
+    width: 80%;
+}
+.main__button{
+    color:var(--bright-orange);
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: 0.3s;
+}
+.main__button--color--dark-cyan{
+    color: var(--Dark-cyan);
+}
+.main__button--color--very-cyan{
+    color: var(--Very-dark-cyan);
+}
+
+@media (min-width:768px){
+    .main__button:hover{
+        cursor: pointer;
+        background-color: var(--bright-orange);
+        color: white;
+        outline: solid white 1px;
+    }
+    .main__button--color--dark-cyan:hover{
+        cursor: pointer;
+        background-color: var(--Dark-cyan);
+        color: white;
+        outline: solid white 1px;
+    }
+    .main__button--color--very-cyan:hover{
+        cursor: pointer;
+        background-color: var(--Very-dark-cyan);
+        color: white;
+        outline: solid white 1px;
+    }
+}
+
+@media (max-width:768px){
+    .main{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: 2rem 0;
+    }
+    .main__sedans{
+        border-bottom-left-radius:0;
+        border-top-right-radius:0.4rem;
+    }
+    .main__luxury{
+        border-top-right-radius:0;
+        border-bottom-left-radius: 0.4rem;
+    }
+    .main__suvs,.main__sedans,.main__luxury{
+        
+        height: 28rem;
+        justify-content: space-evenly;
+    }
+    body{
+        height: 100%;
+        
+    }
+    .main__button:active{
+        transform: scale(0.96);
+        cursor: pointer;
+        
+    }
+    
+}
